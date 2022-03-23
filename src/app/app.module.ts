@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ChoiceComponent } from './choice/choice.component';
+import { BackButtonComponent } from './back-button/back-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ChoiceComponent
+    ChoiceComponent,
+    BackButtonComponent
   ],
   imports: [
     BrowserAnimationsModule,

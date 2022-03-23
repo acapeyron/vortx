@@ -1,0 +1,33 @@
+button{
+    z-index:10;
+    border:none;
+    margin:0px;
+}
+
+.arrow {
+    position: absolute;
+    width: 30px;
+    height: 12px;
+    background: white;
+    margin: 40px 15px;
+    border-radius: 3px 0px 0px 3px;
+}
+
+.arrow::after {
+    content:' ';
+    border-radius: 3px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid white;
+    position: absolute;
+    left: 27px;
+    top: -9.5px;
+}
+
+.up {
+    -ms-transform: rotate(-90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-90deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+}
