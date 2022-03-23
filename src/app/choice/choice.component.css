@@ -1,0 +1,32 @@
+#background{
+    background-color: rgb(32,35,37); width:100vw;height:100vh;
+    color: white;
+    display: flex;
+    user-select: none;
+}
+
+#one{
+    width:50%;
+    height:100%;
+    border-right:1px solid white;
+    text-align: center;
+}
+
+#one > * {
+    position: absolute;
+    top: 45vh;
+    left: 22vw;
+}
+
+#two{
+    width:50%;
+    height:100%;
+    border-right:1px solid white;
+    text-align: center;
+}
+
+#two > * {
+    position: absolute;
+    top: 45vh;
+    left: 72vw;
+}
