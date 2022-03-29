@@ -1,0 +1,58 @@
+<ng-container *ngFor="let route of routeList">
+    <button class="help" id={{route}} *ngIf="this.router.url !='/home' && this.router.url == '/' + route" (click)="openModal(route, choice, presets)">
+        <img src="../assets/images/help.png" id="svg">
+    </button>
+</ng-container>
+
+<!-- choice page -->
+<ng-template #choice>
+    <div id="header1" class="modal-header">
+        <h4 class="modal-title pull-left">Purpose of this project real quick</h4>
+    </div>
+    <div id="header2" class="modal-header" [hidden]="true">
+        <h4 class="modal-title pull-left">How to choose a mode</h4>
+        <!-- <img id="close" src ="../assets/images/close.png"> -->
+    </div>
+    <div id="body1" class="modal-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur 
+            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <div id="body2" class="modal-body" [hidden]="true">
+        Ut eu sem integer vitae justo eget. Volutpat consequat mauris nunc congue. Velit scelerisque in dictum non consectetur 
+        a erat nam at. Bibendum at varius vel pharetra vel turpis nunc eget lorem. Vitae nunc sed velit dignissim sodales ut. 
+        Morbi tristique senectus et netus et malesuada fames ac turpis. Tortor dignissim convallis aenean et tortor at. 
+        Fringilla phasellus faucibus scelerisque eleifend donec pretium. Risus feugiat in ante metus dictum at. 
+    </div>
+    <div class="modal-footer">
+        <button id="btn1" (click)="pageChange(1)"></button>
+        <button id="btn2" (click)="pageChange(2)"></button>
+    </div>
+</ng-template>
+
+<!-- presets page -->
+<ng-template #presets>
+    <div id="header1" class="modal-header">
+        <h4 class="modal-title pull-left">Ahhhh</h4>
+    </div>
+    <div id="header2" class="modal-header" [hidden]="true">
+        <h4 class="modal-title pull-left">How to choose a mode</h4>
+    </div>
+    <div id="body1" class="modal-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur 
+            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <div id="body2" class="modal-body" [hidden]="true">
+        Ut eu sem integer vitae justo eget. Volutpat consequat mauris nunc congue. Velit scelerisque in dictum non consectetur 
+        a erat nam at. Bibendum at varius vel pharetra vel turpis nunc eget lorem. Vitae nunc sed velit dignissim sodales ut. 
+        Morbi tristique senectus et netus et malesuada fames ac turpis. Tortor dignissim convallis aenean et tortor at. 
+        Fringilla phasellus faucibus scelerisque eleifend donec pretium. Risus feugiat in ante metus dictum at. 
+    </div>
+    <div class="modal-footer">
+        <button id="btn1" (click)="pageChange(1)"></button>
+        <button id="btn2" (click)="pageChange(2)"></button>
+    </div>
+</ng-template>

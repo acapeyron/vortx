@@ -1,0 +1,79 @@
+#background{
+    background-color: rgb(32,35,37); 
+    width:100vw;
+    height:100vh;
+}
+
+#title{
+    color:white;
+    position: absolute;
+    top: 8vh;
+    left: 40vw;
+    font-size: 5vh;
+}
+
+#container{
+    display: flex;
+    position: absolute;
+    top: 23vh;
+    /* left: 15vw; */
+    left: 40vw
+}
+
+#container-deployed{
+    transition: 0.5s;
+    display: flex;
+    position: absolute;
+    top: 23vh;
+    left: 15vw;
+}
+
+#list{
+    display:grid;
+    height: 60vh;
+    overflow: auto;
+}
+
+#list > button{
+    position: relative;
+    width: 20vw;
+    height: 10vh;
+    background-color: white;
+    border: 0.5vh solid red;
+}
+
+#list > button:focus{
+    height: 13vh
+}
+
+#video{
+    display: none;
+}
+
+#video-deployed{
+    transition: 0.5s;
+    /* width: 50.4vw; */
+    width: 49.8vw;
+    height: 60vh;
+    background-color: white;
+    border: 0.5vh solid white;
+}
+
+#video-deployed > video{
+    /* height: 61vh; */
+    height: 59vh;
+}
+
+/* ::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: grey;
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+} */

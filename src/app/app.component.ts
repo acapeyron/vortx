@@ -20,7 +20,7 @@ const fade = [
 ];
 
 const slideUp = [
-  query(':leave', style({ position: 'absolute', left: 0, right: 0 ,transform: 'translate3d(0,0,%0)' }), {optional:true}),
+  query(':leave', style({ position: 'absolute', left: 0, right: 0 ,transform: 'translate3d(0,0%,0)' }), {optional:true}),
   query(':enter', style({ position: 'absolute', left: 0, right: 0, transform: 'translate3d(0,-100%,0)' }), {optional:true}),
   group([
     query(':leave', group([
@@ -53,7 +53,9 @@ const slideDown = [
   animations: [
     trigger('routerAnimations', [
       transition('home => choice', slideDown),
-      transition('choice => home', slideUp)
+      transition('choice => home', slideUp),
+      transition('choice => presets', slideDown),
+      transition('presets => choice', slideUp)
     ])
   ]
 })
@@ -63,6 +65,7 @@ export class AppComponent {
   constructor(public navigation: NavigationService) {
     this.navigation.startSaveHistory();
   }
+  
   prepareRouteTransition(outlet:any) {
     const animation = outlet.activatedRouteData['animation'] || {};
     return animation['value'] || null;

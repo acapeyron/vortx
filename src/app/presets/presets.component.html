@@ -1,0 +1,16 @@
+<div id="background">
+    <div id="title">
+        Choose your preset
+    </div>
+    <div id="container">
+        <div id="list" (click)="deployVideo()">
+            <button *ngFor="let preset of presetDic | keyvalue" (click)="show(preset.key)">
+                {{ preset.key }}
+            </button>
+        </div>
+        <div id="video">
+            <video autoplay muted loop oncanplay="this.play()" onloadedmetadata="this.muted=true" [src]="video" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div>

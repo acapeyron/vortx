@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
+import { DisplayModalService } from '../service/display-modal/display-modal.service';
+// import { timeStamp } from 'console';
+
+let loaded = false;
 
 @Component({
   selector: 'app-choice',
@@ -7,9 +11,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChoiceComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(public display: DisplayModalService) {
   }
 
+  ngOnInit(): void{
+    this.display.displayModal('choice', loaded);
+    loaded = true;
+  }
 }
